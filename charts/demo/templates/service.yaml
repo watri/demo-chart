@@ -5,6 +5,17 @@ metadata:
   labels:
     {{- include "demo.labels" . | nindent 4 }}
 spec:
+  {{- if eq .Values.service.type "NodePort" }}
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
+      nodePort: {{ .Values.service.nodePort }}
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "demo.selectorLabels" . | nindent 4 }}
+  {{ else }}
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
@@ -13,3 +24,4 @@ spec:
       name: http
   selector:
     {{- include "demo.selectorLabels" . | nindent 4 }}
+  {{ end }}
