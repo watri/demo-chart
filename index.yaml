@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  demo:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-01-24T10:23:43.2699718+07:00"
+    description: A Helm chart for Kubernetes
+    digest: be127c399c9db5eccff6659de51a3de39bacab41d197beb6e679575b3eda3e88
+    name: demo
+    type: application
+    urls:
+    - https://github.com/watri/demo-chart/demo-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-01-24T10:23:43.2683529+07:00"
