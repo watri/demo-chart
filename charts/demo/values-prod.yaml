@@ -7,7 +7,7 @@ replicaCount: 2
 image:
   repository: watri/demo
   pullPolicy: IfNotPresent
-  tag: ""
+  tag: "973e05b36"
 
 imagePullSecrets: []
 nameOverride: ""
